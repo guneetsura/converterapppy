@@ -114,11 +114,11 @@ def pdftoword():
 	up.config(bg="light blue")
 	up.title("PDF Converter")
 	up.resizable(0,0)
-	try:
-		up.wm_iconbitmap("pdf2.ico")
-	except:
-		print('icon file is not available')
-		pass
+	# try:
+	# 	up.wm_iconbitmap("pdf2.ico")
+	# except:
+	# 	print('icon file is not available')
+	# 	pass
 	file= ""
 	defaultText = "\n\n\n\n\t\t Your extracted text will apear here.\n \t\t     you can modify that text too."
 	#==============App Name==============================================================>>
@@ -131,6 +131,11 @@ def pdftoword():
 	fileEntry = Entry(up,font=('calibri',12),width=40)
 	fileEntry.pack(ipadx=200,pady=50,padx=150)
 	#===========button to access openFile method=================================
+	# pageNumLbl = Label(up, text='Enter page number')
+	# pageNumLbl.pack()
+	# pageNum = Entry(up, width=30)
+	# pageNum.pack()
+	
 	openFileButton = Button(up,text=" Open ",font=('arial',12,'bold'),width=30,
 						bg="sky blue",fg='green',command=openFile)
 	openFileButton.place(x=150,y=80)
@@ -150,8 +155,6 @@ def pdftoword():
 	#===================halt window=============================>>
 	if __name__ == "__main__":
 		up.mainloop()
-
-
 
 button1 = Button(root, text = "Word to PDF", command = wordtopdf)
 button1.grid(row=2, column=0)
