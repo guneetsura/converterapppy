@@ -1,7 +1,7 @@
 # Import Module
 from tkinter import *
 import tkinter as tk
-from tkinter.filedialog import askopenfilenames
+from tkinter.filedialog import askopenfilenames, asksaveasfile
 import img2pdf
 from tkinter.messagebox import showinfo
 
@@ -27,7 +27,8 @@ def image_to_pdf():
 
 # IMAGES TO PDF
 def images_to_pdf():
-	with open(f"Image_to_pdf-file.pdf", "wb") as f:
+	fn = asksaveasfile(mode='w',defaultextension=".pdf", filetypes=[("pdf file","*.pdf")]).name
+	with open(f"" + fn, "wb") as f:
 		f.write(img2pdf.convert(file_names))
 		showinfo("Done","Successfully Converted and combined to PDF!")
 
