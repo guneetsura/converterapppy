@@ -27,7 +27,7 @@ window.configure(bg = "#FFFFFF")
 
 def imgtopdf():
 	window.destroy()
-	import image2pdf
+	import i2p
 	
 
 def wordtopdf():
