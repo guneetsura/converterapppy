@@ -32,6 +32,7 @@ def imgtopdf():
 def p2w():
 	window.destroy()
 	import os
+	#use pip install pdf2docx
 	stream = os.popen('pdf2docx gui')
 	output = stream.read()
 	output
