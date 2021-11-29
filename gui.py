@@ -39,15 +39,10 @@ def wordtopdf():
 		def savename():
 			convert(
 			file.name,    
-			r'.../' + fname.get() + '.pdf'
+			r'' + asksaveasfile(mode='w',defaultextension=".pdf", filetypes=[("pdf file","*.pdf")]).name
 			)  
-			fname.delete(0, END) 
 			showinfo("Done", "File successfully converted ")
-		fname = Entry(win, width=30)
-		fname.grid(row=30, column=5)
-		fname_label = Label(win, text='Save file name')
-		fname_label.grid(row=30, column=4)
-		sname = Button(win, text="Save Name", command=savename)
+		sname = Button(win, text="Save As", command=savename)
 		sname.grid(row=40,column=5)
 		
 
