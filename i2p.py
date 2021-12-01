@@ -43,6 +43,10 @@ def images_to_pdf():
 		showinfo("Done","Successfully Converted and combined to PDF!")
 
 
+def imgades():
+    imga.destroy()
+    import gui
+
 canvas = Canvas(
     imga,
     bg = "#FFFFFF",
@@ -109,7 +113,7 @@ button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=imga.destroy,
+    command=imgades,
     relief="flat"
 )
 button_3.place(

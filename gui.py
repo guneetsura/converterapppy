@@ -5,7 +5,7 @@ import tkinter.ttk as ttk
 from tkinter.filedialog import askopenfile
 from tkinter.messagebox import showinfo
 from docx2pdf import convert
-from tkinter.filedialog import askopenfilename,asksaveasfile
+from tkinter.filedialog import askopenfilename, asksaveasfile
 from PyPDF2 import PdfFileReader
 import PyPDF2
 from pathlib import Path
@@ -23,58 +23,39 @@ def relative_to_assets(path: str) -> Path:
 window = Tk()
 
 window.geometry("568x382")
-window.configure(bg = "#FFFFFF")
+window.configure(bg="#FFFFFF")
+
 
 def imgtopdf():
-	window.destroy()
-	import i2p
-	
+    window.destroy()
+    import i2p
+
+
 def p2w():
-	window.destroy()
-	import os
-	#use pip install pdf2docx
-	stream = os.popen('pdf2docx gui')
-	output = stream.read()
-	output
+    window.destroy()
+    import os
+    # use pip install pdf2docx
+    stream = os.popen('pdf2docx gui')
+    output = stream.read()
+    output
+
 
 def wordtopdf():
-	win=tk.Tk()
-	win.title("Word to Pdf Converter App")
+    window.destroy()
+    import w2p
 
-	def openfile():
-		file = askopenfile(initialdir = "/", filetypes=[('Word Files', '*.docx')])
-		def savename():
-			convert(
-			file.name,    
-			r'' + asksaveasfile(mode='w',defaultextension=".pdf", filetypes=[("pdf file","*.pdf")]).name
-			)  
-			showinfo("Done", "File successfully converted ")
-		sname = Button(win, text="Save As", command=savename)
-		sname.grid(row=40,column=5)
-		
-
-	label=tk.Label(win,text="Choose a file!")
-	label.grid(row=10,column=5,padx=5,pady=5)
-
-	button=ttk.Button(win,text="Select",width=30,command=openfile)
-	button.grid(row=20,column=5,padx=5,pady=5)
-
-	qb = ttk.Button(win, text="Quit", command=win.destroy)
-	qb.grid(row=50, column=5, padx=5, pady=5)
-
-	win.mainloop()
 
 canvas = Canvas(
     window,
-    bg = "#FFFFFF",
-    height = 382,
-    width = 568,
-    bd = 0,
-    highlightthickness = 0,
-    relief = "ridge"
+    bg="#FFFFFF",
+    height=382,
+    width=568,
+    bd=0,
+    highlightthickness=0,
+    relief="ridge"
 )
 
-canvas.place(x = 0, y = 0)
+canvas.place(x=0, y=0)
 canvas.create_rectangle(
     0.0,
     0.0,
