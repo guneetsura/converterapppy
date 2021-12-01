@@ -1,12 +1,4 @@
 from tkinter import *
-import tkinter as tk
-import tkinter.ttk as ttk
-from tkinter.filedialog import askopenfile
-from tkinter.messagebox import showinfo
-from docx2pdf import convert
-from tkinter.filedialog import askopenfilename, asksaveasfile
-from PyPDF2 import PdfFileReader
-import PyPDF2
 from pathlib import Path
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 

@@ -45,7 +45,7 @@ def images_to_pdf():
 
 def imgades():
     imga.destroy()
-    import gui
+    import index
 
 canvas = Canvas(
     imga,

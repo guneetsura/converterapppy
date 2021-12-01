@@ -1,0 +1,8 @@
+Please run 'index.py' file for the main program, the rest are required for importing purposes.
+Kindly refrain from deleting any other file or folder that are placed since each of them are required to run the program.
+
+The program uses Tkinter and some libraries are supposed to be installed using pip command before running it.
+Please run the following commands in terminal to install the packages:
+pip install docx2pdf
+pip install img2pdf
+pip install pdf2docx

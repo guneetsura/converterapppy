@@ -49,7 +49,7 @@ def savename():
 
 def windes():
     win.destroy()
-    import gui
+    import index
 
 canvas = Canvas(
     win,
